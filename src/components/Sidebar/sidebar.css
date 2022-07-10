@@ -1,0 +1,127 @@
+aside{
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+aside .profile{
+    padding: var(--card-padding);
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 100%;
+}
+
+aside .sidebar {
+    margin-top: 1rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+aside .sidebar .menu-item{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    position: relative;
+}
+
+aside .sidebar .menu-item:hover{
+    background: var(--color-light);
+}
+
+aside .sidebar .menu-item .sidebar-icon{
+    font-size: 1.4rem;
+    color: var(--color-gray);
+    margin-left: 2rem;
+    position: relative;
+}
+aside .sidebar .menu-item .notification-count small{
+    background: var(--color-danger);
+    color: white;
+    font-size: 0.7rem;
+    width: fit-content;
+    border-radius: 0.8rem;
+    padding: 0.1rem 0.4rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.7rem;
+}
+
+aside .sidebar h4{
+    margin-left: 1.2rem;
+    font-size: 1rem;
+}
+
+aside .sidebar .active{
+    background: var(--color-light);
+}
+
+aside .sidebar .menu-item.active .sidebar-icon,
+aside .sidebar .active h4{
+    color: var(--color-primary);
+}
+
+aside .sidebar .active::before{
+    content: "";
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    background: var(--color-primary);
+}
+
+aside .sidebar .menu-item:first-child.active{
+    border-top-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+aside .sidebar .menu-item:last-child.active{
+    border-bottom-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+aside .btn{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* ...........Notification popup................. */
+aside .sidebar .notifications-popup{
+    position: absolute;
+    top: 0;
+    left: 110%;
+    width: 30rem;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: 0 0 2rem hsl(--color-primary);
+    z-index: 8;
+    display: none;
+}
+
+aside .sidebar .notifications-popup::before{
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    display: block;
+    background: var(--color-white);
+    position: absolute;
+    left: -0.6rem;
+    transform: rotate(45deg);
+}
+
+aside .sidebar .notifications-popup > div{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+aside .sidebar .notifications-popup small{
+    display: block;
+}
