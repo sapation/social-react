@@ -1,0 +1,58 @@
+.feeds .feed{
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.feeds .feed .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.feeds .feed .head .user{
+    display: flex;
+    gap: 1rem;
+}
+
+.feeds .feed .photo {
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+
+.feeds .feed .action-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 1.4rem;
+    margin: 0.6rem;
+}
+
+.feeds .feed .action-buttons .interaction-buttons span{
+    margin-left: 0.5rem;
+}
+
+.feeds .feed .liked-by{
+    display: flex;
+}
+
+.feeds .feed .liked-by span{
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+    margin-left: -0.6rem;
+}
+
+.feeds .feed .liked-by span:first-child{
+    margin: 0;
+}
+
+.feeds .feed .liked-by p{
+    margin-left: 0.5rem;
+}
